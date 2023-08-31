@@ -1,7 +1,8 @@
-'use client'
 import Tile from "./tile";
 import styles from './Tile.module.css';
 import React, { useState, useEffect } from 'react';
+import useKeypress from 'react-use-keypress';
+
 
 const TilePage: React.FC = () => {
 
@@ -30,6 +31,19 @@ const TilePage: React.FC = () => {
     function generateStartingNumber():number {
         return Math.random() < 0.75 ? 2 : 4; // 75% chance of 2, 25% chance of 4
     }
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+    useKeypress(['ArrowLeft', 'ArrowRight'], (event: KeyboardEvent) => {
+        if (event.key === 'ArrowLeft') {
+            // moveLeft();
+            console.log("Move Left")
+        } else {
+        //   moveRight();
+            console.log("Move Right")
+
+        }
+    });
+
     return (
         <div className={styles.border}>
             {board?.map((row, rowIndex) => (
