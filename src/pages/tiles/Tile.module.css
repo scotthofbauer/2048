@@ -1,0 +1,28 @@
+.border {
+    /* Add your desired background color */
+ }
+ 
+ .row {
+   display: flex;
+   justify-content: center; /* Adjust as needed */
+   align-items: center; /* Adjust as needed */
+   margin-bottom: 10px; /* Add spacing between rows */
+ }
+ 
+ .tile {
+     width: 100px;
+     height: 100px;
+     background-color: #db347f;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 10px;
+     color: white;
+     font-size: 24px;
+     font-weight: bold;
+     margin: 0 5px; /* Add whitespace on both sides */
+   }
+   
+   .number {
+     /* Add any additional styling for the number here */
+   }
